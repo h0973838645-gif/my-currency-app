@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>旅遊記帳匯率通</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2489/2489756.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>旅遊記帳匯率通</h1>
+        </div>
+        
+        <div class="converter">
+            <h3>即時匯率換算</h3>
+            <div class="input-group">
+                <input type="number" id="amount" placeholder="輸入金額">
+                <select id="currencySelect">
+                    <option value="USD">美金 (USD)</option>
+                    <option value="JPY">日圓 (JPY)</option>
+                    <option value="KRW">韓元 (KRW)</option>
+                    <option value="EUR">歐元 (EUR)</option>
+                    <option value="HKD">港幣 (HKD)</option>
+                    <option value="GBP">英鎊 (GBP)</option>
+                    <option value="CNY">人民幣 (CNY)</option>
+                    <option value="SGD">新加坡幣 (SGD)</option>
+                    <option value="VND">越南盾 (VND)</option>
+                    <option value="THB">泰幣 (THB)</option>
+                </select>
+            </div>
+            <p class="result-text">➔ <span id="result">0</span> TWD</p>
+        </div>
+
+        <div class="ledger">
+            <h3>新增消費紀錄</h3>
+            <input type="text" id="note" placeholder="項目名稱 (如：拉麵)">
+            <input type="number" id="cost" placeholder="金額 (TWD)">
+            <button onclick="addLog()">新增一筆紀錄</button>
+        </div>
+
+        <ul id="logList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
